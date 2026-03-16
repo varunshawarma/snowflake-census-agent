@@ -3,7 +3,7 @@ import { processQuery } from '../services/censusTwin.js';
 
 const router = express.Router();
 
-// POST /api/chat - Main endpoint for querying the consensus twin
+// POST /api/chat - Main endpoint for querying the census twin
 router.post('/', async (req, res) => {
   try {
     const { message, conversationHistory = [] } = req.body;
@@ -12,7 +12,7 @@ router.post('/', async (req, res) => {
       return res.status(400).json({ error: 'Message is required' });
     }
 
-    // Process the query through the consensus twin service
+    // Process the query through the census twin service
     const response = await processQuery(message, conversationHistory);
 
     res.json({
