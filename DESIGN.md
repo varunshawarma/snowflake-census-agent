@@ -27,7 +27,7 @@ The agentic loop works as follows:
 
 ### 2. Schema Discovery
 
-Early versions hardcoded 7 table descriptions in the system prompt with guessed column names. This caused frequent SQL errors — for example, `B17001e1` (guessed) vs `B17010e1` (actual) for poverty data.
+Early versions hardcoded table descriptions in the system prompt with guessed column names. This caused frequent SQL errors — for example, `B17001e1` (guessed) vs `B17010e1` (actual) for poverty data.
 
 The fix was to load the full schema from Snowflake at server startup:
 - Query `INFORMATION_SCHEMA.COLUMNS` for all 32 tables and 8,328 columns
