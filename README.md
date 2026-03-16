@@ -2,7 +2,7 @@
 
 An interactive, chat-based AI agent that answers natural language questions about US population data using the Snowflake US Open Census dataset.
 
-**Live demo:** `https://<your-frontend>.up.railway.app`
+**Live demo:** `https://snowflake-consensus-agent.up.railway.app`
 
 ---
 
