@@ -1,0 +1,6 @@
+html, body {
+  height: 100%;
+  background: #0B1628;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
