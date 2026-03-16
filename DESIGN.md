@@ -113,33 +113,3 @@ Persist conversations so users can return to previous sessions.
 
 **12. More eval coverage**
 The current 26 tests cover the main happy paths. Edge cases to add: county-level queries, multi-state comparisons, year-over-year trends (if 2020 data is added), questions about specific cities.
-
----
-
-## Time Breakdown
-
-| Task | Time |
-|---|---|
-| Architecture design + stack selection | 30 min |
-| Backend: Express + Snowflake connection | 45 min |
-| Backend: Claude agentic loop | 60 min |
-| Debugging Snowflake column naming | 90 min |
-| Dynamic schema loader | 45 min |
-| Frontend: React chat UI + design system | 90 min |
-| Evaluation framework (26 tests) | 60 min |
-| System prompt tuning | 45 min |
-| README + documentation | 30 min |
-| **Total** | **~8.5 hours** |
-
----
-
-## Key Technical Decisions
-
-| Decision | Chosen | Alternative | Reason |
-|---|---|---|---|
-| AI provider | Anthropic Claude | OpenAI GPT-4o | Better tool-calling reliability, stronger SQL generation |
-| Backend | Node.js + Express | Python + FastAPI | Existing project codebase |
-| Frontend | React + Vite | Next.js | Simpler, faster dev iteration |
-| Hosting | Railway | Vercel + Railway | Single platform, easier env var management |
-| Eval grading | Claude Haiku | Keyword matching | Catches correct answers with different phrasing |
-| Schema loading | Startup (cached) | Per-request | Avoids latency on every query |
